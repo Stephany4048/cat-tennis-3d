@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Teiness 3D</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage" aria-label="Cat Teiness 3D game">
+        <canvas id="gameCanvas"></canvas>
+        <div class="topbar">
+          <img class="brand" src="./assets/cat-teiness-logo.webp" alt="Cat Teiness" />
+          <div class="scoreboard">
+            <div>
+              <span id="playerName">Midnight Server</span>
+              <strong id="playerScore">0</strong>
+            </div>
+            <div>
+              <span id="rivalName">Sun Striker</span>
+              <strong id="rivalScore">0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="status-panel">
+          <strong id="turnLabel">Midnight Server serves</strong>
+          <span id="moveLabel">Ready</span>
+        </div>
+        <div class="move-dock" role="toolbar" aria-label="Cat tennis moves">
+          <button class="move is-primary" data-shot="serve" title="Serve"><span>Serve</span></button>
+          <button class="move" data-shot="topspin" title="Topspin"><span>Topspin</span></button>
+          <button class="move" data-shot="lob" title="Lob"><span>Lob</span></button>
+          <button class="move" data-shot="slice" title="Slice"><span>Slice</span></button>
+        </div>
+      </section>
+
+      <aside class="roster" aria-label="Cat roster">
+        <div class="roster-head">
+          <img src="./assets/moonball-badge.jpg" alt="" />
+          <div>
+          <h1>Cat Teiness 3D</h1>
+            <p>Family Rally Court</p>
+          </div>
+        </div>
+        <div class="mode-card" aria-label="Match mode">
+          <span>Match Mode</span>
+          <div class="segmented">
+            <button id="soloMode" class="is-active" type="button">Solo</button>
+            <button id="versusMode" type="button">Two Player</button>
+          </div>
+          <span>Roster Pick</span>
+          <div class="segmented">
+            <button id="pickPlayer" class="is-active" type="button">Player 1</button>
+            <button id="pickRival" type="button">Player 2</button>
+          </div>
+        </div>
+        <div id="catRoster" class="cat-grid"></div>
+        <div class="match-card">
+          <img src="./assets/trophy-friends.jpg" alt="" />
+          <div>
+            <span>Match Prize</span>
+            <strong>Friendship Cup</strong>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
